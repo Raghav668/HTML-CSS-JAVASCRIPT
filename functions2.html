@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //call back function - passing one function in another function as an argument
+
+      //step1-writing logic in first function
+      //step2 - passing first function as an argument to the secondfunction
+      //step3 - By using second function parameter we can call back the first function
+
+      function sum(a, b) {
+        var total = a + b;
+        document.write(total);
+      }
+      function add(calling) {
+        calling(11, 2);
+        //    document.write(calling); //contains complete sum function
+      }
+      add(sum);
+
+      //Example2
+
+      /*function nameOf(userName) {
+        var greetings = "hello" + userName;
+        alert(greetings);
+      }
+      function userInput(callingBack) {
+        var user = prompt("Enter your name");
+        callingBack(user);
+      }
+      userInput(nameOf); */
+
+      //Example 3
+      document.write("<br/>");
+
+      function greater(callback) {
+        callback(20, 10);
+      }
+      function condition(a, b) {
+        if (a > b) {
+          document.write(a);
+        }
+      }
+      greater(condition);
+
+      //Higher order function
+      //function that takes another function as an argument
+
+      //nested function - function inside another function
+      document.write("<br/>");
+
+      function division(a, b) {
+        var div = a / b;
+        document.write(div);
+
+        function modulus(c, d) {
+          var result = c % d;
+          document.write(result);
+        }
+        document.write("<br/>");
+        modulus(10, 2);
+      }
+
+      division(10, 2);
+      document.write("<br/>");
+    </script>
+  </body>
+</html>

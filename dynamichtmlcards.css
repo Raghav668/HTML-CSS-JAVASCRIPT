@@ -1,0 +1,57 @@
+* {
+  margin: 20px;
+}
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+section {
+  box-shadow: 0px 0px 5px 0px;
+  width: 300px;
+  height: 320px;
+}
+section div {
+  margin: 0px;
+}
+section div > h1 {
+  margin: 0px;
+  text-align: center;
+}
+section div > p {
+  text-align: center;
+}
+section div > i {
+  font-size: 130%;
+}
+section:first-child > div:first-child {
+  background-image: linear-gradient(to right, #fb5d6b, #ef0e88);
+  padding: 15px;
+}
+section:nth-child(2) > div:first-child {
+  background-image: linear-gradient(to right, #adb7f0, #e34add);
+  padding: 15px;
+}
+section:nth-child(3) > div:first-child {
+  background-image: linear-gradient(to right, #f29b4a, #f2c34c);
+  padding: 15px;
+}
+section:nth-child(4) > div:first-child {
+  background-image: linear-gradient(to right, #7bf6ad, #08ccf9);
+  padding: 15px;
+}
+section:nth-child(5) > div:first-child {
+  background-image: linear-gradient(to right, #000248, #19a1cf);
+  padding: 19px;
+}
+section:nth-child(6) > div:first-child {
+  background-image: linear-gradient(to right, #2f9bd6, #aad8ef);
+  padding: 19px;
+}
+section:nth-child(7) > div:first-child {
+  background-image: linear-gradient(to right, #fb5d6b, #ef0e88);
+  padding: 15px;
+}
+section:nth-child(8) > div:first-child {
+  background-image: linear-gradient(to right, #ff8563, #feae78);
+  padding: 15px;
+}

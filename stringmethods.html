@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var string = "Raghavendra";
+      //length
+      document.write(string.length);
+      document.write("<br/>");
+
+      //slice()
+      var s = string.slice(0, 6);
+      document.write(s);
+      document.write("<br/>");
+
+      var s = string.slice(0, -3);
+      document.write(s);
+      document.write("<br/>");
+
+      //substring() slice and substring is same main difference is substring will not accept negative index
+      var sub = string.substring(0, 6);
+      document.write(sub);
+      document.write("<br/>");
+
+      //substr() substr() is similar to slice().The difference is that the second parameter specifies the length of the extracted part.
+      var str = string.substr(7, 3);
+      document.write(str);
+      document.write("<br/>");
+
+      /*replace() the replace() method does not change the string it is called on. It returns a new string.By default, the replace() method replaces only the first match:To replace case insensitive, use a regular expression with an /i flag (insensitive):*/
+      var rep = string.replace("R", "D");
+      document.write(rep);
+      document.write("<br/>");
+
+      var rep = string.replace(/D/i, "D");
+      document.write(rep);
+      document.write("<br/>");
+
+      //replaceall() to replace everything in a string
+      var all = string.replaceAll("a", "h");
+      document.write(all);
+      document.write("<br/>");
+
+      //toUpperCase() convert the entire string in to upper case
+      var upp = string.toUpperCase();
+      document.write(upp);
+      document.write("<br/>");
+
+      //toLowerCase() convert the entire string in to lower case
+      var low = string.toLowerCase();
+      document.write(low);
+      document.write("<br/>");
+
+      //concat to add 2 string
+      var string1 = "Raghav";
+      var string2 = "  is a hero";
+      document.write(string1.concat(string2));
+      document.write("<br/>");
+
+      //trim() to remove whitespace in the both sides of a string
+      var ame1 = "                               prabhas salaar  ";
+      var e = ame1.trim();
+      console.log(e);
+      document.write("<br/>");
+
+      //trimStart() to remove whitespace at the beginning of a string
+      var ame2 = "                      prabhas Adipurush  ";
+      var c = ame2.trimStart();
+      console.log(c);
+      document.write("<br/>");
+
+      //trimEnd() to remove whitespace at the end of a string
+      var ame3 = "                     prabhas Radheshyam              ";
+      var d = ame3.trimEnd();
+      console.log(d);
+      document.write("<br/>");
+
+      //padStart() to provide padding at the start of a string
+      var pas = string.padStart(12, "rrrr"); //it takes lengthof string + pad value
+      document.write(pas);
+      document.write("<br/>");
+
+      var pas1 = string.padStart(20, "rebel");
+      document.write(pas1);
+      document.write("<br/>");
+
+      //padEnd() to provide padding at the end of a string
+      var pas3 = string.padEnd(12, "rrrr"); //it takes  how much length of the string we hsve to give + pad value
+      document.write(pas3);
+      document.write("<br/>");
+
+      var pas4 = string.padEnd(20, "rebel");
+      document.write(pas4);
+      document.write("<br/>");
+
+      //charAt() //to get the character through index number
+      var char = "Rebel";
+      var at = char.charAt(0);
+      document.write(at);
+      document.write("<br/>");
+
+      //split()//A string can be converted to an array with the split() method
+      var ram = "hi this is raghav";
+      document.write(ram.split(" "));
+      document.write("<br/>");
+
+      document.write(ram.split(""));
+      document.write("<br/>");
+
+      document.write(ram.split("h"));
+      document.write("<br/>");
+
+      document.write(ram.split("this"));
+      document.write("<br/>");
+
+      //indexOf() //returns index number and also for first occurance
+      var indy = "harrison ford";
+      document.write(indy.indexOf("r"));
+      document.write("<br/>");
+
+      //lastIndexOf() //returns index number and also for last occurance .Both indexOf(), and lastIndexOf() return -1 if the text is not found:
+      var indy1 = "harrison ford";
+      document.write(indy1.length);
+      document.write("<br/>");
+      document.write(indy1.lastIndexOf("r"));
+      document.write("<br/>");
+
+      //search() search and indexof is mostly same
+      var hell = "hell and heaven";
+      var sear = hell.search("hell");
+      document.write(sear);
+      document.write("<br/>");
+
+      var sear = hell.search("n");
+      document.write(sear);
+      document.write("<br/>");
+
+      var string = "Raghav endra g v";
+
+      document.write(string.indexOf("v", 6));
+      document.write("<br/>");
+      document.write(string.search("g"));
+      document.write("<br/>");
+
+      /*The search() method cannot take a second start position argument.
+The indexOf() method cannot take powerful search values (regular expressions).*/
+
+      //match()
+      var mat = "bahuba balla bicha kata"; //The match() method searches a string for a match against a regular expression, and returns the matches, as an Array object.
+      document.write(mat.match(/a/g));
+      document.write("<br/>");
+      /*If the regular expression does not include the g modifier (to perform a global search), 
+      the match() method will return only the first match in the string.*/
+
+      var s = "hello hi this is raghav";
+      var a = s.split("");
+      var r = a.reverse();
+      var b = r.toString();
+      var d = b.replaceAll(",", "");
+
+      console.log(d);
+    </script>
+  </body>
+</html>

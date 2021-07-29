@@ -1,0 +1,42 @@
+* {
+  margin: 0px;
+}
+header {
+  padding: 15px 10px;
+  background-color: black;
+}
+ul {
+  display: flex;
+  box-sizing: border-box;
+}
+li {
+  color: white;
+  list-style-type: none;
+  flex: 1;
+  padding: 2px;
+}
+footer {
+  margin-top: 100px;
+  background-color: black;
+  display: flex;
+}
+footer div {
+  flex: 1;
+  padding: 20px 20px;
+}
+p {
+  color: gray;
+  text-align: center;
+  padding: 5px;
+}
+h2 {
+  color: gray;
+  padding: 10px;
+  text-align: center;
+}
+
+address {
+  color: white;
+  text-align: center;
+  padding: 5px;
+}

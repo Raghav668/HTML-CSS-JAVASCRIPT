@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = [12, 32, 44, 55, 11, 33, 56];
+      var j;
+      for (var i = 0; i < arr.length; i++) {
+        j = i + 1;
+        if (arr[j] > arr[i] && arr[j] > arr[j + 1]) {
+          document.write(arr[j] + "is the peak");
+        }
+      }
+      document.write("<br/>");
+      let num = [1, 2, 3, 4, 5];
+      //tosting()
+      let a = num.toString();
+      document.write(num);
+
+      document.write("<br/>");
+      //Push()
+      let b = num.push(6, 7);
+      document.write(num);
+
+      document.write("<br/>");
+      //pop()
+      let c = num.pop(7);
+      document.write(num);
+
+      document.write("<br/>");
+      //unshift()
+      let d = num.unshift(0);
+      document.write(num);
+
+      document.write("<br/>");
+      //shift()
+      let e = num.shift(0);
+      document.write(num);
+      document.write("<br/>");
+      //palindrome
+      debugger;
+      var string = "madam";
+      var len = string.length;
+      var h = 0;
+
+      for (var k = 0; k < len / 2; k++) {
+        if (string[k] == string[len - 1 - k]) {
+          h++;
+        }
+      }
+      if (k == h) {
+        document.write(string + " " + "is a palindrome");
+      } else {
+        document.write(string + " " + "is not a palindrome");
+      }
+    </script>
+  </body>
+</html>

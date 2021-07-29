@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var object = [
+        {
+          name: "raghavendra",
+          age: 22,
+          location: "andhra pradesh",
+          fan: "prabhas",
+          job: "wipro",
+        },
+
+        {
+          name: "pavan",
+          age: 21,
+          location: "andhra pradesh",
+          fan: "mahesh babu",
+          job: "capgemini",
+        },
+
+        {
+          name: "Bhanu",
+          age: 23,
+          fan: "pawan",
+          job: "NTT data",
+        },
+
+        {
+          name: "chandra mouli",
+          age: 22,
+          location: "andhra pradesh",
+          fan: "prabhas",
+          job: "wipro",
+        },
+      ];
+
+      for (var i = 0; i < object.length; i++) {
+        var a = object[i].job;
+        document.write(a);
+      }
+      console.table(object[1]);
+      document.write(object[2].age);
+      document.write(object[3].name);
+
+      //   console.log(object[2].location);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //fibnoicci series
+      var a = 0;
+      var b = 1;
+      var c = 5;
+      var sum = 0;
+      var d = 0;
+      while (sum <= c) {
+        sum = a + b;
+        if (sum <= c) {
+          document.write(sum + ",");
+        }
+        a = b;
+        b = sum;
+        d++;
+      }
+      document.write("<br/>");
+      //clesius to farenhit
+      var temp = 0;
+      var far;
+      far = temp * 1.8 + 32;
+      document.write(far + "farenhit");
+      document.write("<br/>");
+
+      //farehit to celsius
+      var temparature = 10;
+      var cel;
+      cel = (temparature - 32) * (5 / 9);
+      document.write(cel + "celsius");
+      document.write("<br/>");
+
+      //third question
+      var arr = [2, 3, 5, 7, 9, 0];
+      debugger;
+      for (var i = 0; i < arr.length; i++) {
+        for (var j = i + 1; j < arr.length; j++) {
+          if (arr[i] + arr[j] == 10) {
+            document.write(arr[i] + "," + arr[j]);
+          }
+        }
+      }
+      document.write("<br/>");
+    </script>
+  </body>
+</html>

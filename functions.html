@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //function declaration or function statement or function with parameters
+
+      function additon(a, b) {
+        var add = a + b;
+        document.write(add);
+      }
+      additon(20, 10);
+      document.write("<br/>");
+      additon(60, 90);
+      document.write("<br/>");
+
+      //function without parameters
+
+      function sentence() {
+        document.write("This is function without parameters");
+      }
+      sentence();
+      //sentence();
+      //sentence();
+      document.write("<br/>");
+
+      //function with return statement
+
+      function conditionStatements(a, b) {
+        if (a > b) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      document.write(conditionStatements(20, 4));
+      document.write("<br/>");
+      document.write(conditionStatements(249, 3000));
+      document.write("<br/>");
+      //function with default parameters
+
+      function greater(a, c, b = 20, d = 40) {
+        if (a > b && c < d) {
+          document.write(a);
+        } else {
+          document.write(c);
+        }
+      }
+      greater(30, 35);
+      document.write("<br/>");
+      greater(20, 55);
+      document.write("<br/>");
+
+      //anonymous function
+      //function without function name. it will execute only if it is assigned to a variable
+      //   function (){
+      //      document.write("This is anonymus function")
+      //  }
+
+      //self invoking function. no need to call the function we can pass the parameters and execute in the same function
+      (function () {
+        document.write("this is self invoking function");
+      })();
+
+      document.write("<br/>");
+
+      (function (amount, GstPrice) {
+        var totalAmount = amount + (amount * GstPrice) / 100;
+        document.write(totalAmount);
+      })(10000, 20);
+
+      document.write("<br/>");
+      //function expression - assigning function to a variable
+
+      var multiplication = function (a, b) {
+        var mult = a * b;
+        document.write(mult);
+      };
+      multiplication(20, 2);
+      document.write("<br/>");
+      multiplication(2, 3);
+      document.write("<br/>");
+
+      //arrow function - shorthand way of writing function expression
+      var division = (a, b) => {
+        var result = a / b;
+        document.write(result);
+      };
+      division(10, 2);
+      document.write("<br/>");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Write a JavaScript Program to check the even numbers from 1-100,*/
+
+      var i, even;
+
+      for (i = 1; i < 100; i++) {
+        if ((even = i % 2 == 0)) {
+          document.write(i + " ");
+        }
+      }
+      document.write("<br/>");
+      /*    Write a JavaScript Program to print the pattern
+       *
+       * *
+       * * *
+       * * * *  */
+
+      var i;
+
+      for (i = 1; i <= 5; i++) {
+        for (j = 1; j <= i; j++) {
+          document.write("*");
+        }
+        document.write("<br />");
+      }
+
+      /*i) take an array  of some fruits
+      fruits = [‘apple’,’mango’,’bannana’,’pineapple’]
+
+      ii) you need to check wether the pineapple is there in the array or not
+      iii) if pineapple is present in the fruits array just print in console ‘pineapple is present in the array’
+      iv) if pineapple is not present in the fruits array  just console pineapple is not present in the array
+      */
+
+      var fruits = ["apple", "mango", "bannana", "pineapple"];
+      var a = 1;
+      for (var i = 0; i < 4; i++) {
+        if (fruits[i] == "pineapple") {
+          a = 1;
+        }
+      }
+      if (a == 1) {
+        document.write("pineapple is present in the array");
+      } else {
+        document.write("pineapple is not present in the array");
+      }
+    </script>
+  </body>
+</html>

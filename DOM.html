@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="maindiv">
+      <div id="subdiv1">raghav</div>
+      <div>bhanu</div>
+      <p id="subdiv2">pavan</p>
+
+      <p id="para">hi tthis is raghav</p>
+
+      <span class="if">achievwrs if</span>
+      <span class="if">ach</span>
+      <span class="if">achief</span>
+      <span class="if">achievwrf</span>
+
+      <input type="submit" name="first name" value="click" />
+      <input type="text" name="last name" />
+
+      <section id="start"></section>
+    </div>
+    <script>
+      var a = document.getElementById("maindiv");
+      a.style.backgroundColor = "red";
+
+      var b = document.getElementById("subdiv1");
+      b.innerHTML = "<h1>HELLO</h1>";
+      //index we have to use 1.class 2.tag name 3.queryselectorall
+      var c = document.getElementById("subdiv2");
+      c.style.color = "green";
+      //id selects unique. queryselector takes first element which matches without any index
+      var d = document.getElementById("para");
+      d.style.color = "aqua";
+
+      var e = document.getElementsByClassName("if");
+      e[0].style.color = "gray";
+
+      e[1].style.color = "gray";
+      e[2].style.color = "gray";
+      e[3].style.color = "gray";
+
+      var f = document.querySelectorAll("div div");
+      f[0].style.fontSize = "200px";
+      f[1].style.fontSize = "200px";
+
+      var g = document.getElementsByTagName("p");
+      g[0].style.color = "yellow";
+      g[1].style.color = "yellow";
+
+      var h = document.querySelectorAll("div p");
+      h[0].style.fontSize = "200px";
+      h[1].style.fontSize = "200px";
+
+      var i = document.querySelector("div span");
+      i.style.fontSize = "160px";
+
+      // var j = document.getElementsByName("first name");
+      // j.style.color = "green";
+
+      //step 1 - select element
+      //step 2 - create element
+      //step 3 -append
+      var l = document.body;
+      var k = document.createElement("h1");
+      k.innerText = "hey ghrrhrh";
+      l.append("kgf is a good filr,"); // we can append string in append. we cannot append string in append child (difference)
+      //  l.append(k);
+      l.appendChild(k);
+
+      var element = document.getElementById("start");
+      var create = document.createElement("p");
+      create.innerText = "The most violent man called one man the most violent";
+      element.appendChild(create);
+    </script>
+  </body>
+</html>

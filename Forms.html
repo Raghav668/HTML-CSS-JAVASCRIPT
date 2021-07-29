@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        background-color: brown;
+        box-shadow: 0px 0px 10px 0px;
+        padding: 40px;
+        border: 1px solid brown;
+        width:25%
+      }
+      form label{color: beige;}
+      label,input{padding:8px;margin: 10px;}
+    </style>
+  </head>
+  <body>
+    <form action="#" method="post" target="_blank">
+      <label for="username">First Name</label>
+      <input
+        type="text"
+        name="First Name"
+        id="first name"
+        placeholder="Enter the first name"
+      /><br/>
+      <label for="Last name">Last Name</label
+      ><input
+        type="text"
+        name="Last name"
+        id="last name"
+        placeholder="Enter the last name"
+      /><br/>
+      <label for="contact number">Contact Number</label>
+      <input
+        type="tel"
+        name="contact n.o"
+        id="contact"
+        pattern="[0-9]{10}"
+        placeholder="Enter the contact number"
+      /><br/><label for="">EMAIL:</label
+      ><input
+        type="email"
+        name="Email"
+        id="email"
+        placeholder="Enter the email"
+      /><br/><label for="">Password</label
+      ><input
+        type="password"
+        name="Password"
+        id="password"
+        placeholder="Enter the password"
+        maxlength="6"
+      /><br/><label for="confirm password">confirm password</label
+      ><input
+        type="password"
+        name="confirm password"
+        id="confirm password"
+        placeholder="confirm passord"
+        maxlength="6"
+      /><br/><input type="date" name="DOB" id="DOB" />
+      <input type="file" name="File name" id="file"/>
+      <br/>
+      <label for="Gender">Gender</label><input type="radio" name="Gender" id="Gender">Male
+      <input type="radio" name="Gender" id="Sex"/>Female<input
+        type="submit"
+        value="LOGIN"
+      /><input type="reset" value="RESET" /><input
+        type="button"
+        value="VERIFY"
+      />
+      </form>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>click here</button>
+    <p id="raghav"></p>
+    <script>
+      //array methods
+      var fruits = ["apple", "mango", "banana", "pineapple", "grapes", "guava"];
+
+      //includes() //(returns Boolean true or false)
+      var find = fruits.includes("grapes");
+      document.getElementById("raghav").innerHTML = find;
+      document.write("<br/>");
+
+      //indexOf()
+      var index = fruits.indexOf("apple"); //returns index number
+      document.write(index);
+      document.write("<br/>");
+
+      var index1 = fruits.indexOf("java");
+      document.write(index1);
+      document.write("<br/>");
+
+      //join()
+      var j = fruits.join("-"); //it will concatinate(add) all the elements in an array similar to tostring()
+      document.write(j);
+      document.write("<br/>");
+
+      var h = fruits.join("++");
+      document.write(h);
+      document.write("<br/>");
+
+      //push()
+
+      var pu = fruits.push("dragon fruit", "orange"); //adds element at the end of an array
+      document.write(fruits);
+      document.write("<br/>");
+
+      //pop()
+      fruits.pop(); //removes element at the end of an array
+      document.write(fruits);
+      document.write("<br/>");
+
+      //unshift()
+      fruits.unshift("raghav", "pavan"); //adds element at the beginning of an array
+      document.write(fruits);
+      document.write("<br/>");
+
+      //shift()
+      fruits.shift(); //removes element at the beginning of an array
+      document.write(fruits);
+      document.write("<br/>");
+
+      //splice()
+      fruits.splice(1, 2); //(starting index number, delete count)
+      document.write(fruits);
+      document.write("<br/>"); //removing elements in the middle of an array
+
+      fruits.splice(4, 0, "apple", "mango"); //(starting index number, delete count, adding elements)
+      document.write(fruits);
+      document.write("<br/>");
+
+      fruits.splice(0, 1);
+      document.write(fruits);
+      document.write("<br/>");
+
+      //reverse()
+      fruits.reverse(); //reverse the entire elements in an array
+      document.write(fruits);
+      document.write("<br/>");
+
+      //tostring() //convert entire array into string
+      var num = [1, 2, 3, 4, 5, 6];
+      num.toString();
+      document.write(num);
+      document.write("<br/>");
+      document.write(typeof num.toString());
+      document.write("<br/>");
+
+      //length
+      document.write(num.length);
+      document.write("<br/>");
+
+      //slice() to slice the portion of an array
+
+      document.write(fruits.slice(1, 4)); //slice from index n.o 1 to before 4 but not 4
+      document.write("<br/>");
+      //delete
+
+      delete fruits[0];
+      document.write(fruits);
+      document.write("<br/>");
+      //concat
+      const myGirls = ["Cecilie", "Lone"];
+      const myBoys = ["Emil", "Tobias", "Linus"];
+      const myChildren = myGirls.concat(myBoys);
+      document.write(myChildren);
+      document.write("<br/>");
+    </script>
+  </body>
+</html>

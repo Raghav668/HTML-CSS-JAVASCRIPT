@@ -1,0 +1,92 @@
+"use strict"; // it will show if any error is there
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .span1 {
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body id="body">
+    <span class="span2">hello</span>
+
+    <div id="num">
+      <p class="subclass">h</p>
+      <p class="subclass">b</p>
+      <p class="subclass">a</p>
+      <p class="subclass">a</p>
+      <p class="subclass">a</p>
+    </div>
+    <script>
+      //createElement() creates element
+      //append()
+      //appendChild()
+      //setAttribute()
+      //getAttribute()
+      // remove()
+      //removeChild()
+      //className =
+      //classList.add()
+      //classList.delete()
+      //classList.toggle()
+      //closest()
+
+      var selectingElement = document.getElementsByTagName("body")[0];
+      var creatingElement = document.createElement("p");
+      creatingElement.innerText = "hello hi";
+      selectingElement.appendChild(creatingElement); //we cannot directly write anything in the parent section through append. we can use append child and write text through innertext or innerhtml
+
+      selectingElement.append("salaar"); //we can directly write anything in the parent section through append
+      document.write("<br/>");
+
+      var creatingElement2 = document.createElement("h1");
+      creatingElement2.innerText = "Radheshyam";
+      selectingElement.appendChild(creatingElement2);
+
+      creatingElement2.setAttribute("id", "demo"); //creates ID inside h1 tag
+      console.log(creatingElement2);
+      console.log(creatingElement2.getAttribute("id")); //shows what is the id name in the h1 tag which is demo
+
+      //creatingElement2.remove(); //remove complete h1 tag which is radheshyam
+      selectingElement.removeChild(creatingElement2); //remove h1 tag by using parent element logic= parent.method(child)
+
+      var creatingElement3 = document.createElement("span");
+      creatingElement3.innerText = "adipurush";
+      selectingElement.appendChild(creatingElement3);
+
+      //class names
+      //creatingElement3.className = "span1"; //creating class name
+      //creatingElement3.classList.add("span1"); // adds class name
+      //creatingElement3.classList.remove("span1"); //removes class name
+      creatingElement3.classList.toggle("span1"); // if class name is there it will remove if class name is not there it will add
+
+      //closest - through child element we can select parent element and change properties
+      var className = document.getElementsByClassName("span2")[0];
+      // className.closest("#body").style.backgroundColor = "black";
+
+      var selecting = document.querySelector(".subclass");
+
+      //  selecting.closest("#num").style.backgroundColor = "red";
+
+      var hello = document.getElementById("body");
+      var hi = document.createElement("p");
+      hi.innerText = "This is removing element";
+      hello.appendChild(hi);
+      // hi.remove();
+
+      var second = document.createElement("h1");
+      second.innerText = "This is removing child";
+      hello.appendChild(second);
+
+      // hello.removeChild(second);
+
+      second.setAttribute("id", "second1");
+      document.write(second.getAttribute("id"));
+    </script>
+  </body>
+</html>

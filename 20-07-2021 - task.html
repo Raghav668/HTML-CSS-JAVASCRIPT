@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    firstName <input type="text" name="firstName" id="first" /> lastName
+    <input type="text" name="lastName" id="last" />
+    <br />
+    <button id="btn">click</button>
+    <script>
+      var clickButton = document.getElementById("btn");
+      clickButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        var first = document.getElementById("first");
+        var last = document.getElementById("last");
+        last.value = first.value;
+        first.value = ""; //on click value in first input box copied to second input box and first input box becomes empty
+      });
+      document.write("<br/>");
+      //GST
+
+      function gst(amount, gstValue = 18) {
+        var total = amount + (amount * 18) / 100;
+        document.write(total);
+      }
+      gst(100);
+    </script>
+  </body>
+</html>
