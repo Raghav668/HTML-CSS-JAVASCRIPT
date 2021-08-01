@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="button">click</button>
+
+    <table>
+      <thead>
+        <tr>
+          <th>User id</th>
+          <th>ID</th>
+          <th>Title</th>
+          <th>body</th>
+        </tr>
+      </thead>
+      <tbody id="table"></tbody>
+    </table>
+    <script>
+      var btn = document.getElementById("button");
+      var sec = document.getElementById("div");
+      var xhr = new XMLHttpRequest();
+      btn.addEventListener("click", function () {
+        xhr.open("GET", "https://jsonplaceholder.typicode.com/posts", true);
+        xhr.addEventListener("load", function () {
+          debugger;
+          if (this.status == 200 || this.status == 4) {
+            var arr = this.responseText;
+            var table = document.getElementById("table");
+            newArr = "";
+            for (var i = 0; i < arr.length; i++) {
+              newArr += "<tr>";
+              newArr += "<td>" + arr[i].userId + "</td>";
+              newArr += "<td>" + arr[i].id + "</td>";
+              newArr += "<td>" + arr[i].title + "</td>";
+              newArr += "<td>" + arr[i].body + "</td>";
+              newArr += "</tr>";
+            }
+            table.innerHTML = newArr;
+          }
+        });
+        xhr.send();
+      });
+    </script>
+  </body>
+</html>
